@@ -5,7 +5,7 @@ let imagebtn = document.querySelector("#image");
 let imageip = document.querySelector("#image input");
 let image = document.querySelector("#image img");
 
-const Api_Url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyAutLdupG2AM72BXJUZ02OYSsj3ZjlNkhs";
+// const Api_Url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyAutLdupG2AM72BXJUZ02OYSsj3ZjlNkhs";
 let user={
     message:null,
     file:{
@@ -31,7 +31,7 @@ async function generateResponse(aiChatBox) {
     };
 
     try {
-        let response = await fetch(Api_Url, RequestOption);
+          let response = await fetch("http://localhost:5000/gemini", RequestOption);
         console.log("Raw response status:", response.status);
 
         if (!response.ok) {
