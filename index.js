@@ -31,7 +31,7 @@ async function generateResponse(aiChatBox) {
     };
 
     try {
-          let response = await fetch("http://localhost:5000/gemini", RequestOption);
+        let response = await fetch(Api_Url, RequestOption);
         console.log("Raw response status:", response.status);
 
         if (!response.ok) {
